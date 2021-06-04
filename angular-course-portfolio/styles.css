@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+
+/*
+Naming Convention & Style Synchronisation 
+
+Naming Convention: we use 'camelCase' 
+(for Component-names Angular converted 'camelCase' into 'name-name', footer and header where renamed by hand)
+
+1. Font Styling
+2. Colors - Bg/ Text
+3. General Classes
+*/
+/* Font Styling */
+h1, h2, h3, p, a {
+font-family: 'Arvo', serif;
+}
+h1 {
+    font-size: 2.5rem;
+}
+p {
+    font-size: 1rem;
+}
+/* Colors */
+/* Color Scheme: Black #0B0C10, Dark Grey #1F2833, Light Grey #C5C6C7, Light Green #66FCF1, Dark Green #45A29E */
+/* Background Colors */
+.bgBlack {
+    background-color: #0B0C10;
+}
+.bgDarkGrey {
+    background-color: #1F2833;
+}
+.bgLightGrey {
+    background-color:  #C5C6C7;
+}
+.bgWhite {
+    background-color: white;
+}
+.bgDarkGreen {
+    background-color: #45A29E;
+}
+.bgLightGreen {
+    background-color: #66FCF1;
+}
+/* Text - Colors */
+.txtBlack {
+    color: #0B0C10;
+}
+.txtDarkGrey {
+    color: #1F2833;
+}
+.txtLightGrey {
+    color:  #C5C6C7;
+}
+.txtWhite {
+    color: white;
+}
+.txtDarkGreen {
+    color: #45A29E;
+}
+.txtLightGreen {
+    color: #66FCF1;
+}
+/* General Classes */
+.navSpace {
+    padding-top: 4em;
+}
+
+
+/*# sourceMappingURL=styles.css.map*/

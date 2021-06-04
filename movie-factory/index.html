@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" >
+
+    <title>Movie Factory</title>
+  </head>
+
+  <body>
+    <!-- =========================HEADER======================= -->
+    <!-- =============================================================== -->
+    <div class="container">
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light own-style mt-5 pt-4 align-items-center">
+      <div class="container-fluid m-4">
+        <div class="row ">
+       
+          <!-- ------------------ column ------------------- -->
+            <div class=" col-sm-12 col-md-12 col-lg-12 ">
+              <div class="container-fluid has-bg-img bg-dark">
+                <img class="bg-image  img-fluid img-responsive myImage" src="images\2853921.jpg" alt="banner">
+                  <div class="row ml-auto">
+                    <div class="col-6 >
+                      <a class="navbar-brand " href="#" >
+                      </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
+                          <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Contact</a>
+                          </li>
+                        </ul>
+                      </div>  
+                    </div>
+                    <div class="col-6 mr-auto align-self-end " >
+                      <h2><Header class="text-end title-font text-light pt-2">MOVIE FACTORY </Header></h2>
+                    </div>
+                  </div>  
+              </div>
+            </div>
+          </div>
+      </div>
+    </nav>
+              <!-- =================Cards and local header================== -->
+              <!-- ========================================================= -->
+        <div class="container-fluid pt-4 ">
+            <section class="container">
+               
+              <!-- --------------- Space for local header------------------- -->
+                <div class="d-flex flex-row justify-content-around ">
+                  <button type="submit" class="btn btn-dark" id="sortBy">Sort List</button>
+                  <!-- <div class="icon ml-auto" id="sortBy" >
+                    <input type="submit" value="sort" src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/hand-thumbs-up.svg width="32" height="32" alt="">
+                  </div> -->
+
+                </div>
+
+            <!-- --------------- Space for the cards only------------------- -->
+              <div class="row pt-4" id="movielist"></div>
+
+          </section>
+        </div>      
+          
+          
+    
+              
+              <!-- ====================  FOOTER HERE  ====================== -->
+              <!-- ========================================================= -->
+              <div class="container-fluid">
+                  
+                    <footer class="container bg-dark text-light text-center text-lg-start mt-5 pt-4">
+                      <div class="container p-2">
+                        <!--Grid row-->
+                        <div class="row">
+                          <!--Grid column-->
+                          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <h4 class="text-uppercase">Movie Factory</h4>
+                          </div>
+                        </div>
+                        <!--Grid row-->
+                        <div class="row">
+                          <!--Grid column-->
+                          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <a href="#!" class="text-light">Contact us</a>
+                          </div>
+                        </div>
+
+                    
+                      <!-- Copyright -->
+                      <div class="text-center row p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                        © 2021 Copyright:
+                        <a class="text-light text-center" href="https://Hackers_Restaurant.com/">Movie Factory</a>
+                      </div>
+                    </footer>
+                    <!-- Footer -->
+        </div>
+      </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+    <!-- movies-list JS-->
+    <script src="movies.json"></script>
+    <script>
+      /* _________________Create an Object from the JSON  __________________*/
+
+      let originList=JSON.parse(movies)
+
+
+      /* _________________ initialize list for render  __________________*/
+
+       let chosenList=originList
+
+
+
+      /* __________________SORT For LIKES   ________________________*/
+         
+            function compare(a, b) {
+           // Use toUpperCase() to ignore character casing
+             const likesA = a.likes.toUpperCase();
+             const likesB = b.likes.toUpperCase();
+
+             let comparison = 0;
+             if (likesA > likesB) {
+               comparison = 1;
+             } else if (likesA < likesB) {
+               comparison = -1;
+             }
+             return comparison;
+           }
+
+          
+
+
+
+      /* _________________Create a pointer to render cards  __________________*/
+
+      let placeElem=document.getElementById('movielist')
+
+      
+
+
+
+      /* ___________________Loop to insert cards ________________________*/
+      const renderVideos=(renderedList)=>{
+
+        for(let i=0;i<renderedList.length;i++){
+          
+         
+  
+          placeElem.innerHTML+=`
+          <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
+              <div class="card "  >
+                  <img src="${renderedList[i].image}" class="img img-responsive card-img" />
+            
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fluid">${renderedList[i].name}</h5>
+                    <p class="card-text">${renderedList[i].description}</p>
+                    
+                    <div class="d-flex flex-row justify-content-around">
+  
+                        <div class="submiticon">
+                          <input type="submit" value="Like" src=https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/hand-thumbs-up.svg width="32" height="32" alt="like">
+                        </div>
+                    
+                        <div>
+                          <h4 class="count">${renderedList[i].likes}</h4>
+                        </div>
+  
+                    </div>
+                  </div>
+                </div>
+          </div>
+                      `;
+        } 
+
+      }
+      /* ___________________ Call for initial render  ________________________*/
+      renderVideos(originList)
+      const sortList=originList.sort(compare)
+      console.log(sortList)
+
+      /* ______________Event listeners for likes ________________________*/
+
+      let iconPointer=document.getElementsByClassName('submiticon');
+      let countPointer=document.getElementsByClassName('count');
+      
+      for(let i=0; i<iconPointer.length ;++i){
+      // console.log(iconPointer[i])
+      //  console.log(countPointer[i])
+        
+       const incrFunc=()=>countPointer[i].innerHTML=++countPointer[i].innerHTML
+       iconPointer[i].addEventListener("click",incrFunc)
+
+      // console.log(countPointer[i].innerHTML)
+      }
+
+    
+        
+        
+
+      /* ______________Event listeners for sort ________________________*/
+
+      let sortPointer=document.getElementById('sortBy');
+      // sortPointer.addEventListener("click", renderVideos(sortedList))
+      
+
+
+
+
+    </script>
+  </body>
+  </html>
+
+
+  <!-- /* __________________SORT GENERAL ________________________*/
+
+  // function compareValues(key) { 
+  //     return  function compare(a, b) {
+  //         // Use toUpperCase() to ignore character casing
+  //         const likesA = a[key].toUpperCase();
+  //         const likesB = b[key].toUpperCase();
+          
+  //         let comparison = 0;
+  //         if (likesA > likesB) {
+  //           comparison = 1;
+  //         } else if (likesA < likesB) {
+  //           comparison = -1;
+  //         }
+  //         return comparison;
+  //       }
+  //     }
+      
+  //     let sortedByName=moviesObj.sort(compareValues('name'));
+  //     let sortedByLikes=moviesObj.sort(compareValues('likes'));
+      
+  //     console.log(sortedByName)
+  //     console.log(sortedByLikes)
+  /* __________________ END SORT  ________________________*/ -->
+
+
+
+  <!-- Attempted to use icon by bootstrap property , first attempt did not work -->
+  <!-- <i class="bi bi-hand-thumbs-up"></i> -->

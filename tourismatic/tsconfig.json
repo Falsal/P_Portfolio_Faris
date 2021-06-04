@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target":"ES5",
+      "lib":["ES6","ES2017","ES2016","DOM"],
+      "sourceMap": true,
+      "noEmitOnError": true,
+      // "skipLibCheck": true,
+      // "allowSyntheticDefaultImports": true 
+    }
+}

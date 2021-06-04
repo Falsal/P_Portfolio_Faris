@@ -1,0 +1,33 @@
+body html{
+width: 100%;
+}
+body{
+ background-color: rgb(224, 180, 112);
+}
+.myImage{
+    width: 100%;    /* or 100% of container */
+    height: 100%;      /*  or 100% of container */
+    object-fit: cover; /* none can be an option too as cover may deform it*/
+    object-position: 20% 10%; /* if both 50% will center it*/
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon .score{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.own-style{
+    background-color: grey;
+    border-radius: 3%;
+}
+
+.title-font{
+    font-weight: bold;
+    /* color:rgb(49, 49, 65); */
+}

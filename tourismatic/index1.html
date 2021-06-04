@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"; rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>CR-5-Faris</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+
+   
+
+    <style>
+        html body{
+            height:100%;
+            margin: 0;
+        }
+
+        :root{
+            --current_color:rgb(156, 9, 156);
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .header{
+            background-color: rgb(36, 182, 121);
+            width: 100%;
+        }
+        #bg_img{ 
+        background: url('./images/hero_vienna.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        /* padding-top: 1%; */
+        }
+
+        #main_title{
+            font-family: 'Playball', cursive;
+        }
+
+   
+    </style>
+</head>
+<body>
+        <div id="bg_img" class="container-fluid  pt-0 pb-5 w-100  d-sm-block mb-0" style="height:100vh" >
+            <div class="row mt-0 mb-0 pb-0 h-100 align-items-end justify-content-center" style="color: rgb(23, 99, 23);background-color: rgba(230, 221, 221, 0.4);" >
+                <div class="col-md-8 col-sm-12 mb-md-4 mt-md-1 mt-sm-2 mb-sm-1 align-text-bottom" >
+                    <p id="main_title" class="fw-bold text-center" style="color: rgb(36, 182, 121); font-size: 4.5rem"> My personal travel diary</p>
+                </div>
+            </div>
+            <div class="row  align-items-center mb-5 pb-5">
+                <div class="col-12 d-flex justify-content-center mt-0 h-25 ">
+                    <a href="#attract">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--current_color)" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div> 
+ 
+            <div class="navbar sticky-top navbar-expand-lg mt-0 p-0 w-100 mb-5"  >
+                <div class="container-fluid header" >
+                    <ul class="navbar-nav" >
+                        <li class="nav-item" >
+                            <a href="#" class="nav-link navbar-brand" style="color:white;" >
+                                My Travels
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#attract" class="nav-link" style="color:white;">
+                                Attractions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#restaurants" class="nav-link" style="color:white;">
+                                Restaurants
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#n_events" class="nav-link" style="color:white;">
+                                Events
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex gap-2 d-md-inline-block ">
+                        <button class="btn btn-sm btn-outline-light float-end" type="button" id="ascend">Ascending</button>
+                        <button id="descend" class=" btn btn-sm btn-outline-warning float-end mx-1" type="button">Descending</button>
+                    </div>
+
+                  
+                </div>
+            </div>
+            
+               
+        <div class="container">
+            <div class="row">
+                <a class="mt-1 " id="attract"></a>
+            </div>
+        </div>
+    <!-- ======================== Main Attractions ======================== -->
+            <!-- <div class="d-none mb-5" id="attractions">main attraction</div> -->
+        <div class="container mt-5 " > 
+            <div class="bg-white py-4 px-4 mt-5">
+                <div class="row ">
+                    <h3 class=" col-12 d-grid gap-2 d-md-inline-block pb-4 ">Main Attractions</h3>
+                </div>
+                <div class="row mb-4" id="location">
+                    <!-- Space for items locations -->
+                </div>
+                <div  id="restaurants"></div>
+            </div><!-- End Locations -->
+
+            <div class="bg-white py-4 px-4">
+                <h3 class=" pb-4">Restaurants</h3>
+                <div class="row mb-4" id="rest">
+                    
+                </div><!-- End Row -->
+                <div  id="n_events"></div>
+            </div><!-- End Restaurants -->
+            
+            
+            <div class="bg-white py-4 px-4" >
+                <h3 class=" pb-4">Events</h3>
+                <div class="row mb-4" id="events">
+                    <!-- End Row -->
+                </div>
+            </div><!-- End Events -->
+            
+        </div>
+    
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ 
+</body>
+</html>

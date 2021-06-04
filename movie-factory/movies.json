@@ -1,0 +1,51 @@
+let movies=`[{
+    "name": "Captain Mike ",
+    "image": "https://tinyurl.com/2t534sef",
+    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare .",
+    "likes":"85",
+    "voted":"false"
+  }, {
+    "name": "Lowrence Of Arabia",
+    "image": "https://tinyurl.com/jw24rw6n",
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis.  Morbi.",
+    "likes":"43",
+    "voted":"false"
+  }, {
+    "name": "Prince of Persia",
+    "image": "https://tinyurl.com/k7bpw64u",
+    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.  Morbi vestibulum, ",
+    "likes": "84",
+    "voted":"false"
+  }, {
+    "name": "Behaving Badly",
+    "image": "https://tinyurl.com/z7jchssp",
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis.",
+    "likes": "21",
+    "voted":"false"
+  }, {
+    "name": "Psycho",
+    "image": "https://randommer.io/images/movies/539.webp",
+    "description": "Maecenas ut massa quis .",
+    "likes": "26",
+    "voted":"false"
+  }, {
+    "name": "Troll Hunter",
+    "image": "https://tinyurl.com/mn7hu8b6",
+    "description": "Integer tincidunt ante vel ipsum. ",
+    "likes": "52",
+    "voted":"false"
+  }, {
+    "name": "Frenzy",
+    "image": "https://randommer.io/images/movies/573.webp",
+    "description": "In hac habitasse platea dictumst.",
+    "likes": "88",
+    "voted":"false"
+  }, {
+    "name": "Jaws",
+    "image": "https://randommer.io/images/movies/578.webp",
+    "description": "Nulla ut erat id mauris vulputate. ",
+    "likes": "71",
+    "voted":"false"
+  }]`
+
+
