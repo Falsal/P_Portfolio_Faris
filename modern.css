@@ -322,16 +322,16 @@ footer hr {
 }
 .testimonial p span{
   font-style: italic;
-  font-weight: 500;  
-  font-size:large;
-  color: rgb(160, 107, 14);
+  font-weight: 600;  
+  font-size:medium;
+  color: rgb(247, 123, 40);
 
 }
-#span-font{
+/* #span-font{
   font-weight: 400;
   color:rgb(247, 123, 40);
   font-size:medium;
-}
+} */
 
 /* Spotlight */
 .spotlight {
